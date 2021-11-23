@@ -103,7 +103,7 @@ const CarouselComp = (props) => {
               <span className="carousel_sub_tilte">{item.sub_title}</span>
               <h2 className="carousel_headar">{item.title}</h2>
               <p className="carousel_desc">{item.description}</p>
-              <a>
+              <a href="#">
                 <Button
                   className="carousel_read_more_button big_cursor"
                   onClick={() => props.history.push("/u/collection")}

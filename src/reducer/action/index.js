@@ -1,5 +1,4 @@
 import axios from "axios";
-import { map } from "lodash";
 
 const url = "http://localhost:4000";
 

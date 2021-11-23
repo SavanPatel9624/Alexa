@@ -6,8 +6,6 @@ import { handleUpdateData } from "../../reducer/action";
 import map from "lodash/map";
 import { handleEnterLeave, handleEnterMouse } from "../../common";
 
-let data = [];
-let editData = [];
 const AboutHome = (props) => {
   const [aboutHomeData, setAboutHomeData] = useState({ ...props.aboutData });
 

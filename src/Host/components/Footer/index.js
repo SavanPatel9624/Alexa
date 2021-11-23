@@ -66,7 +66,7 @@ const Footer = (props) => {
       oldAddress["adLine"] = JionArray.map((e) => e).join(", ");
       setAddress(oldAddress);
     }
-  }, [footerData]);
+  }, [footerData?.address]);
 
   const onDrop = (picture) => {
     handleChange({ target: { name: "file", value: picture[0] } });

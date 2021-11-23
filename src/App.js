@@ -6,7 +6,6 @@ import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./sass/style.scss";
 import "./index.css";
-import WrapperLayout from "./WrapperLayout";
 import HomeRouter from "./routes";
 
 function ScrollToTop() {

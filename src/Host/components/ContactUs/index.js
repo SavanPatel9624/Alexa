@@ -76,7 +76,10 @@ const ContactUs = (props) => {
         <div className="container mob-container">
           <Row>
             <Col md={8} className="contact_map">
-              <iframe src="https://www.google.com/maps?q=Alexa%20Ceramic%20Pvt%20Ltd%2C%20Lakhdhirpur%2C%20Morbi%2C%20Gujarat%2C%20India&z=14&t=&ie=UTF8&output=embed" />
+              <iframe
+                title="contact map"
+                src="https://www.google.com/maps?q=Alexa%20Ceramic%20Pvt%20Ltd%2C%20Lakhdhirpur%2C%20Morbi%2C%20Gujarat%2C%20India&z=14&t=&ie=UTF8&output=embed"
+              />
             </Col>
           </Row>
         </div>

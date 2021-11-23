@@ -6,7 +6,6 @@ import {
   Col,
   Row,
   Image,
-  Modal,
   Button,
   FormControl,
   FloatingLabel,

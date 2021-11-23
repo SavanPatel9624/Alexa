@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Alert from "../Alert";
 import { getFooterData } from "../../reducer/action";
 import { handleEnterLeave, handleEnterMouse } from "../../common";
 
