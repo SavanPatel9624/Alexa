@@ -54,7 +54,6 @@ const AboutHome = (props) => {
   };
 
   const handleSubmitData = (id) => {
-    props.handleAlertMessage(true, false, "");
     editData["id"] = id;
     const moreData = aboutHomeData.more_details;
     map(moreData, (item) => {
