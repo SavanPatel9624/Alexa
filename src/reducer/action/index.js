@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://app-014b96e3-6d97-47c9-887f-5441667bde1a.cleverapps.io/";
+const url = "https://app-014b96e3-6d97-47c9-887f-5441667bde1a.cleverapps.io/";
 
 export const handleFirstTimeLoad = (isFirstTime) => {
   return (dispatch) => dispatch({ type: "IS_FIRST_TIME", data: isFirstTime });
