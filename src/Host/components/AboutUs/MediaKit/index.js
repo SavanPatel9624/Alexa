@@ -103,7 +103,7 @@ const MediaKit = (props) => {
     } else {
       const imgState = imageRef?.current?.state?.pictures;
       filterState = imgState?.filter((name) => {
-        return name?.includes("http://localhost:4000/");
+        return name?.includes("http://app-014b96e3-6d97-47c9-887f-5441667bde1a.cleverapps.io/");
       });
       map(picture, (item, index) => {
         files.push(item);
