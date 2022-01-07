@@ -129,6 +129,83 @@ a {
       font-weight: bold;
     }
   }
+  .whats_app_icon {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    width: 39px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    .fa-whatsapp-square {
+      font-size: 45px;
+    color: #00e676;
+    margin-top: -2px;
+    }
+  }
+  .send_message_block {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    z-index: 999;
+  }
+  .send_message {
+    &.full_label {
+      width: 100%;
+      justify-content: space-between;
+      transition: all 0.8s;
+    }
+    transition: all 0.8s;
+    width: 126px;
+    height: 50px;
+    padding: 0px 15px;
+    border-radius: 5px 5px 0px 0px;
+    color: #fff;
+    background-color: #f58634;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sms_box {
+    &.full_height_form{
+      height: 100%;
+      padding: 10px 10px 0 10px;
+      transition: all 0.8s;
+      max-height: 350px;
+    }
+    height: 0;
+width: 350px;
+background-color: #f58634;
+padding: 0;
+transition: height 0.8s , max-height 0.8s;
+max-height: 0;
+padding: 0 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+&::-webkit-scrollbar {
+  width: 6px;
+  padding: 6px;
+}
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &::-webkit-scrollbar-track {
+    margin-top: 10px;
+  }
+form {
+  
+  background-color: #fff;
+box-shadow: 0 2px 3px #00000014;
+margin: 2px 2px 5px 2px;
+padding: 8px;
+border-radius: 8px;
+ 
+}
+label {
+  color : #212529;
+}
+  }
 }
 
 .footer_modal {
@@ -140,5 +217,16 @@ a {
 @media (max-width: 768px) {
   .item-box {
     margin-top: 20px;
+  }
+}
+
+.copany-rights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  p {
+    font-size: 13px;
+    color: #888;
   }
 }

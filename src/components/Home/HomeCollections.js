@@ -146,9 +146,10 @@ const HomeCollections = (props) => {
                       <h2 className="achievement_year">{item.year}</h2>
                     </div>
                     <div>
-                      <span className="achievement_desc">
-                        {item.description}
-                      </span>
+                      <span
+                        className="achievement_desc"
+                        dangerouslySetInnerHTML={{ __html: item.description }}
+                      />
                     </div>
                   </div>
                 </div>

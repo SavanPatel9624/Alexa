@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getFooterData } from "../../reducer/action";
 import { handleEnterLeave, handleEnterMouse } from "../../common";
+import InquiryForm from "../Form";
 
 const addressData = [
   { name: "company", title: "Company", defaultValue: "" },
@@ -16,6 +17,7 @@ const addressData = [
 const Footer = (props) => {
   const [address, setAddress] = useState();
   const [addressJson, setAddressJson] = useState(addressData);
+  const [sendMessage, setSendMessage] = useState(false);
 
   const { footerData } = props || {};
 
@@ -37,11 +39,47 @@ const Footer = (props) => {
     props.getFooterData();
   }, []);
 
+  const handleMessage = () => {
+    setSendMessage(!sendMessage);
+  };
   return (
     <footer
       className="main-footer dark position-relative"
       style={{ clear: "both" }}
     >
+      <span className="whats_app_icon">
+        <a
+          href="https://wa.me/2348100000000"
+          class="whatsapp_float"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-whatsapp-square" />
+        </a>
+      </span>
+      <span className="send_message_block">
+        <span
+          className={`${sendMessage ? "full_label" : ""} send_message`}
+          onClick={() => !sendMessage && handleMessage()}
+        >
+          <span>{!sendMessage ? "Send ema.." : "Send email"}</span>
+          {sendMessage && (
+            <span>
+              <i className="fa fa-close" onClick={() => handleMessage()} />
+            </span>
+          )}
+        </span>
+        <div className={`sms_box ${sendMessage ? "full_height_form" : ""}`}>
+          <div>
+            <p>
+              Please fill out the form below and we will get back to you as soon
+              as possible.
+            </p>
+          </div>
+          <div></div>
+          <InquiryForm isContact isFooter />
+        </div>
+      </span>
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-md-6 item-box">
@@ -172,6 +210,10 @@ const Footer = (props) => {
               <p className="faddress">{address?.adLine}</p>
             </div>
           </div>
+        </div>
+        <div className="d-flex copany-rights">
+          <p>© 2021 All Right Reserved</p>
+          <p>Made By:- Miracle Software Solution</p>
         </div>
       </div>
     </footer>

@@ -37,7 +37,9 @@ const CarouselComp = (props) => {
             <div className="carousel_box">
               <span className="carousel_sub_tilte">{item.sub_title}</span>
               <h2 className="carousel_headar">{item.title}</h2>
-              <p className="carousel_desc">{item.description}</p>
+              <p className="carousel_desc">
+                <span dangerouslySetInnerHTML={{ __html: item.description }} />
+              </p>
               <a>
                 <Button
                   className="carousel_read_more_button big_cursor"

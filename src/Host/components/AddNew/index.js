@@ -22,7 +22,7 @@ const AddNewPost = ({
   const onDrop = (picture) => {
     const imgState = imageRef?.current?.state?.pictures;
     const filterState = imgState?.filter((name) => {
-      return name?.includes("https://app-014b96e3-6d97-47c9-887f-5441667bde1a.cleverapps.io/");
+      return name?.includes("https://alexa-api-2.herokuapp.com/");
     });
     if (selectMultiImage) {
       handleChange({
