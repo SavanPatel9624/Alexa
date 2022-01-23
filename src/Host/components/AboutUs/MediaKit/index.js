@@ -21,6 +21,7 @@ import {
   handleDeleteMedia,
 } from "../../../../reducer/action";
 import { handleEnterLeave, handleEnterMouse } from "../../../common";
+import {API_URL} from "../../../../clientConfing";
 
 let data = [];
 let update = false;
@@ -103,7 +104,7 @@ const MediaKit = (props) => {
     } else {
       const imgState = imageRef?.current?.state?.pictures;
       filterState = imgState?.filter((name) => {
-        return name?.includes("https://alexa-api-2.herokuapp.com/");
+        return name?.includes(`${API_URL}/`);
       });
       map(picture, (item, index) => {
         files.push(item);

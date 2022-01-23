@@ -1,6 +1,7 @@
 import axios from "axios";
+import {API_URL} from '../../clientConfing';
 
-const url = "https://alexa-api-2.herokuapp.com";
+const url = API_URL;
 
 export const handleFirstTimeLoad = (isFirstTime) => {
   return (dispatch) => dispatch({ type: "IS_FIRST_TIME", data: isFirstTime });

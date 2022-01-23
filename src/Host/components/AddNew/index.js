@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Modal, Button, FloatingLabel, FormControl } from "react-bootstrap";
 import ImageUploader from "react-images-upload";
 import CKEditor from "../CkEditor";
+import {API_URL} from "../../../clientConfing";
 
 const AddNewPost = ({
   show,
@@ -22,7 +23,7 @@ const AddNewPost = ({
   const onDrop = (picture) => {
     const imgState = imageRef?.current?.state?.pictures;
     const filterState = imgState?.filter((name) => {
-      return name?.includes("https://alexa-api-2.herokuapp.com/");
+      return name?.includes(`${API_URL}/`);
     });
     if (selectMultiImage) {
       handleChange({
