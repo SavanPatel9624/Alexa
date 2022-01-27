@@ -32,8 +32,7 @@ class InquiryForm extends React.Component {
   submituserRegistrationForm = (e) => {
     e.preventDefault();
     if (this.validateForm()) {
-      this.props
-        .handleInquiryForm({
+      this.props.handleInquiryForm({
           ...this.state.fields,
           formType: this.props.isContact ? "Contect Us" : "Product Inquiry",
         })

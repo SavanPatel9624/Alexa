@@ -38,24 +38,24 @@ const Footer = (props) => {
 
   const { footerData } = props || {};
   const footerDataJson = [
-    { name: "facebook", title: "Facebook", defaultValue: footerData?.facebook },
+    { name: "facebook", title: "Facebook", defaultValue: footerData?.facebook?.trim('') },
     {
       name: "instagram",
       title: "Instagram",
-      defaultValue: footerData?.instagram,
+      defaultValue: footerData?.instagram?.trim(''),
     },
-    { name: "twitter", title: "Twitter", defaultValue: footerData?.twitter },
+    { name: "twitter", title: "Twitter", defaultValue: footerData?.twitter?.trim('') },
     {
       name: "printrest",
       title: "Printrest",
-      defaultValue: footerData?.printrest,
+      defaultValue: footerData?.printrest?.trim(''),
     },
-    { name: "mobile", title: "Mobile", defaultValue: footerData?.mobile },
-    { name: "email", title: "Email", defaultValue: footerData?.email },
+    { name: "mobile", title: "Mobile", defaultValue: footerData?.mobile?.trim('') },
+    { name: "email", title: "Email", defaultValue: footerData?.email?.trim('') },
   ];
 
   useEffect(() => {
-    if (footerData?.address) {
+    if (footerData?.address.trim('')) {
       const oldAddress = [];
       const JionArray = footerData?.address?.split("$");
       addressJson.map((e, i) => (e.defaultValue = JionArray[i]));
@@ -73,7 +73,11 @@ const Footer = (props) => {
     data["logo"] = footerData.logo;
   };
   const handleChange = (e) => {
-    data[e.target.name] = e.target.value;
+    if(e.target.value === ''){
+      data[e.target.name] = ' ';
+    }else {
+      data[e.target.name] = e.target.value;
+    }
   };
   const handleAddressChange = (e) => {
     updatAddress = true;
@@ -172,38 +176,38 @@ const Footer = (props) => {
                 </Link>
               </div>
               <div className="social-icon">
-                <a
-                  href={footerData?.facebook}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                {footerData?.facebook?.trim('') &&<a
+                    href={footerData?.facebook?.trim('')}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  href={footerData?.instagram}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                  <i className="fab fa-facebook-f" />
+                </a>}
+                {footerData?.instagram?.trim('') &&<a
+                    href={footerData?.instagram?.trim('')}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a
-                  href={footerData?.twitter}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                  <i className="fab fa-instagram" />
+                </a>}
+                {footerData?.twitter?.trim('') &&<a
+                    href={footerData?.twitter?.trim('')}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href={footerData?.printrest}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                  <i className="fab fa-twitter" />
+                </a>}
+                {footerData?.printrest?.trim('') &&<a
+                    href={footerData?.printrest?.trim('')}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-pinterest-p"></i>
-                </a>
+                  <i className="fab fa-pinterest-p" />
+                </a>}
               </div>
             </div>
           </div>
@@ -217,35 +221,35 @@ const Footer = (props) => {
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/">Home</Link>
                 </li>
                 <li
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/company-profile">Company Profile</Link>
                 </li>
                 <li
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/collection">Collections</Link>
                 </li>
                 <li
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/catalogue">Catalogue</Link>
                 </li>
                 <li
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>

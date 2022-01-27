@@ -95,7 +95,7 @@ const Footer = (props) => {
                 </Link>
               </div>
               <div className="social-icon">
-                {footerData?.facebook &&<a
+                {footerData?.facebook?.trim('') &&<a
                     href={footerData?.facebook}
                     target="_blank"
                     onMouseEnter={handleEnterMouse}
@@ -103,7 +103,7 @@ const Footer = (props) => {
                 >
                   <i className="fab fa-facebook-f" />
                 </a>}
-                {footerData?.instagram &&<a
+                {footerData?.instagram?.trim('') &&<a
                     href={footerData?.instagram}
                     target="_blank"
                     onMouseEnter={handleEnterMouse}
@@ -111,7 +111,7 @@ const Footer = (props) => {
                 >
                   <i className="fab fa-instagram" />
                 </a>}
-                {footerData?.twitter && <a
+                {footerData?.twitter?.trim('') && <a
                     href={footerData?.twitter}
                     target="_blank"
                     onMouseEnter={handleEnterMouse}
@@ -119,7 +119,7 @@ const Footer = (props) => {
                 >
                   <i className="fab fa-twitter" />
                 </a>}
-                {footerData?.printrest && <a
+                {footerData?.printrest?.trim('') && <a
                     href={footerData?.printrest}
                     target="_blank"
                     onMouseEnter={handleEnterMouse}
@@ -140,21 +140,21 @@ const Footer = (props) => {
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/">Home</Link>
                 </li>
                 <li
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right"/>
                   <Link to="/company-profile">Company Profile</Link>
                 </li>
                 <li
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/collection">Collections</Link>
                 </li>
                 <li
