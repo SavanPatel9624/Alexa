@@ -146,8 +146,14 @@ a {
   .send_message_block {
     position: fixed;
     bottom: 0px;
-    right: 20px;
+    //right: 20px;
     z-index: 999;
+    right: -200px;
+    transition: right 0.5s;
+    &.right_side {
+      transition: right 0s 0s;
+      right: 20px;
+    }
   }
   .send_message {
     &.full_label {
@@ -217,6 +223,27 @@ label {
 @media (max-width: 768px) {
   .item-box {
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .main-footer {
+    .send_message_block {
+      &.right_side {
+        right: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .main-footer {
+    .send_message_block {
+      right: -160px;
+      .sms_box {
+        width: 300px;
+      }
+    }
   }
 }
 

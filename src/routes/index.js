@@ -19,6 +19,7 @@ import HostCollectionDetails from "../Host/components/Collection/CollectionDetai
 import HostContactUs from "../Host/components/ContactUs";
 import HostExport from "../Host/components/Export";
 import WrapperLayout from "../WrapperLayout";
+import Catalogue from "../components/Catalogue";
 
 function HomeRouter() {
   return (
@@ -84,6 +85,15 @@ function HomeRouter() {
           render={() => (
             <WrapperLayout>
               <CollectionDetails />
+            </WrapperLayout>
+          )}
+        />
+        <Route
+          exact
+          path="/catalogue"
+          render={() => (
+            <WrapperLayout>
+                <Catalogue />
             </WrapperLayout>
           )}
         />
@@ -169,6 +179,15 @@ function HomeRouter() {
             </WrapperLayout>
           )}
         />
+          <Route
+              exact
+              path="/u/catalogue"
+              render={() => (
+                  <WrapperLayout isHost>
+                      <Catalogue />
+                  </WrapperLayout>
+              )}
+          />
         <Route
           exact
           path="/u/contact"

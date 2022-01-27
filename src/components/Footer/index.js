@@ -49,15 +49,15 @@ const Footer = (props) => {
     >
       <span className="whats_app_icon">
         <a
-          href="https://wa.me/2348100000000"
-          class="whatsapp_float"
+          href="https://wa.me/919512345033"
+          className="whatsapp_float"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fab fa-whatsapp-square" />
+          <i className="fab fa-whatsapp-square" />
         </a>
       </span>
-      <span className="send_message_block">
+      <span className={`send_message_block ${sendMessage ? 'right_side' : ''}`}>
         <span
           className={`${sendMessage ? "full_label" : ""} send_message`}
           onClick={() => !sendMessage && handleMessage()}
@@ -95,38 +95,38 @@ const Footer = (props) => {
                 </Link>
               </div>
               <div className="social-icon">
-                <a
-                  href={footerData?.facebook}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                {footerData?.facebook &&<a
+                    href={footerData?.facebook}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  href={footerData?.instagram}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                  <i className="fab fa-facebook-f" />
+                </a>}
+                {footerData?.instagram &&<a
+                    href={footerData?.instagram}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a
-                  href={footerData?.twitter}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                  <i className="fab fa-instagram" />
+                </a>}
+                {footerData?.twitter && <a
+                    href={footerData?.twitter}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href={footerData?.printrest}
-                  target="_blank"
-                  onMouseEnter={handleEnterMouse}
-                  onMouseLeave={handleEnterLeave}
+                  <i className="fab fa-twitter" />
+                </a>}
+                {footerData?.printrest && <a
+                    href={footerData?.printrest}
+                    target="_blank"
+                    onMouseEnter={handleEnterMouse}
+                    onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fab fa-pinterest-p"></i>
-                </a>
+                  <i className="fab fa-pinterest-p" />
+                </a>}
               </div>
             </div>
           </div>
@@ -161,14 +161,14 @@ const Footer = (props) => {
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/catalogue">Catalogue</Link>
                 </li>
                 <li
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-chevron-right"></i>
+                  <i className="fas fa-chevron-right" />
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>
@@ -185,7 +185,7 @@ const Footer = (props) => {
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="fas fa-phone-volume"></i> +{footerData?.mobile}
+                  <i className="fas fa-phone-volume" /> +91{footerData?.mobile}
                 </a>
               </p>
               <p>
@@ -194,7 +194,7 @@ const Footer = (props) => {
                   onMouseEnter={handleEnterMouse}
                   onMouseLeave={handleEnterLeave}
                 >
-                  <i className="far fa-envelope"></i> {footerData?.email}
+                  <i className="far fa-envelope" /> {footerData?.email}
                 </a>
               </p>
             </div>
@@ -205,7 +205,7 @@ const Footer = (props) => {
                 <h6>Visit</h6>
               </div>
               <span>
-                <i className="fas fa-map-marker-alt"></i> {address?.company}
+                <i className="fas fa-map-marker-alt" /> {address?.company}
               </span>
               <p className="faddress">{address?.adLine}</p>
             </div>
