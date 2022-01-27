@@ -1,3 +1,3 @@
-const API_URL = 'https://alexa-api-6vlkl.ondigitalocean.app';
+const API_URL = 'https://alexaceramic.com';
 
 export {API_URL}
